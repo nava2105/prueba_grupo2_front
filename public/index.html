@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat de 4 Usuarios</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
     <script defer src="client.js"></script>
@@ -50,6 +51,26 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script defer src="client.js"></script>
+</head>
+<body>
+<h1>Chat de 4 Usuarios</h1>
+
+<!-- Selección de usuario -->
+<div id="user-selection">
+    <label for="username">Elige tu espacio (Usuario1, Usuario2, Usuario3, Usuario4):</label>
+    <input type="text" id="username" placeholder="Ej: Usuario1">
+    <button onclick="joinChat()">Entrar</button>
+</div>
+
+<!-- Área del chat -->
+<div id="chat" style="display: none;">
+    <div id="messages" style="border: 1px solid black; height: 300px; overflow-y: scroll;"></div>
+    <input type="text" id="message-input" placeholder="Escribe un mensaje..." />
+    <button onclick="sendMessage()">Enviar</button>
+
 </div>
 </body>
 </html>
